@@ -22,7 +22,7 @@ A modern Flask web application for real-time drowsiness detection with a beautif
    ```
 
 3. **Open Your Browser**:
-   Navigate to `http://localhost:5000`
+   Navigate to `[http://localhost:5000](http://127.0.0.1:5000/)`
 
 ## 📁 Project Structure
 
@@ -49,48 +49,6 @@ Drowsiness/
 - **Alert System**: Visual and audio drowsiness alerts
 - **Confidence Scoring**: Real-time confidence levels
 
-## 🔧 Code Integration Guide
-
-### Step 1: Replace the Placeholder Detection
-
-Find this section in `app.py` (around line 35):
-
-```python
-# Placeholder implementation - replace with your code
-processed_frame = frame.copy()
-# ... replace everything here with your detection logic
-```
-
-### Step 2: Add Your Model/Cascade Files
-
-```python
-def __init__(self):
-    # Add your model loading here
-    # self.face_cascade = cv2.CascadeClassifier('path/to/haarcascade_frontalface_default.xml')
-    # self.eye_cascade = cv2.CascadeClassifier('path/to/haarcascade_eye.xml')
-    # self.model = load_model('your_model.h5')  # if using deep learning
-
-    self.is_detecting = False
-    # ... rest of init
-```
-
-### Step 3: Implement Your Detection Logic
-
-```python
-def process_frame(self, frame):
-    # Convert to grayscale if needed
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-    # Your detection code here:
-    # - Face detection
-    # - Eye detection
-    # - Feature extraction
-    # - Drowsiness classification
-
-    # Return results
-    return processed_frame, is_drowsy, confidence_score
-```
-
 ## 🎨 UI Features
 
 - **Control Panel**: Start/stop detection, upload images
@@ -107,32 +65,6 @@ The interface adapts to different screen sizes:
 - Tablet: Stacked layout
 - Mobile: Single column, optimized buttons
 
-## 🛠 Customization
-
-### Colors and Themes
-
-Edit `static/css/style.css` CSS variables:
-
-```css
-:root {
-  --primary-blue: #2563eb;
-  --secondary-blue: #3b82f6;
-  /* ... modify colors here */
-}
-```
-
-### Detection Parameters
-
-Add configuration variables to the `DrowsinessDetector` class:
-
-```python
-def __init__(self):
-    # Your detection parameters
-    self.ear_threshold = 0.25
-    self.consecutive_frames = 20
-    # ... etc
-```
-
 ## 🔍 Testing Your Integration
 
 1. **Test with Static Image**: Use the upload feature first
@@ -146,5 +78,3 @@ def __init__(self):
 - OpenCV handles video capture and image processing
 - Flask serves the web interface and API endpoints
 - JavaScript manages real-time UI updates and user interactions
-
-Replace the placeholder code with your drowsiness detection algorithm and you'll have a fully functional web application!
