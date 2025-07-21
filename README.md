@@ -2,46 +2,6 @@
 
 A modern Flask web application for real-time drowsiness detection with a beautiful blue-themed UI.
 
-## 🔹 Where to Add Your Drowsiness Detection Code
-
-### Main Detection Method: `process_frame()` in `app.py`
-
-**Location**: Line 15 in `app.py`
-
-This is the **primary method** where you should add your drowsiness detection algorithm:
-
-```python
-def process_frame(self, frame):
-    """
-    🔹 PUT YOUR DROWSINESS DETECTION CODE HERE 🔹
-
-    This method receives a frame (numpy array) and should return:
-    - processed_frame: The frame with detection overlays
-    - is_drowsy: Boolean indicating if drowsiness is detected
-    - confidence: Float between 0-1 indicating confidence level
-    """
-
-    # 1. Add your eye detection code here
-    # Example: eyes = eye_cascade.detectMultiScale(gray)
-
-    # 2. Add your blink detection code here
-    # Example: ear = calculate_eye_aspect_ratio(landmarks)
-
-    # 3. Add your drowsiness classification code here
-    # Example: if ear < THRESHOLD: is_drowsy = True
-
-    # 4. Draw detection overlays on the frame
-    # Example: cv2.rectangle(frame, (x,y), (x+w,y+h), (255,0,0), 2)
-
-    return processed_frame, is_drowsy, confidence
-```
-
-### Additional Integration Points:
-
-1. **Webcam Settings** (Line 45): Modify camera initialization if needed
-2. **Image Upload Processing** (Line 120): Add image-specific preprocessing
-3. **Model Loading**: Add your model loading code in the `__init__` method (Line 10)
-
 ## 🚀 Quick Start
 
 > **⚠️ Note:**
