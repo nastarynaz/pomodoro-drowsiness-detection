@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dylib
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Environment
+venv/
+.env
+.env.*
+
+# Model files
+*.keras
+*.h5
+*.pth
+*.pt
+*.ckpt
+*.joblib
+*.pb
+
+# Data
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Git
+*.orig
+*.rej
+
+# Others
+*.bak
+*.swp
+*.swo
+
+# Node
+node_modules/
+*.keras
+venv/
